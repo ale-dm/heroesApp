@@ -12,6 +12,7 @@ import { NewPageComponent } from './pages/newPage/newPage.component';
 import { SearchPageComponent } from './pages/searchPage/searchPage.component';
 import { CardComponent } from './components/card/card.component';
 import { HeroImagePipe } from './pipes/heroImage.pipe';
+import { ConfirmDialogComponent } from './components/confirmDialog/confirmDialog.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { HeroImagePipe } from './pipes/heroImage.pipe';
     NewPageComponent,
     SearchPageComponent,
     CardComponent,
+    ConfirmDialogComponent,
 
     //Pipes
     HeroImagePipe
