@@ -1,0 +1,28 @@
+.hero-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-primary {
+  color: #1976d2; /* Primary color */
+}
+
+.text-secondary {
+  color: #757575; /* Secondary grayish color */
+}
+
+.shadow-3 {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.border-round-xl {
+  border-radius: 12px;
+}
+
+.bg-light-gray {
+  background-color: #f5f5f5;
+}

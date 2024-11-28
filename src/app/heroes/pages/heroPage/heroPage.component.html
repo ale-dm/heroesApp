@@ -1,0 +1,62 @@
+<ng-template #divLoading>
+    <div class="flex justify-content-center align-items-center min-h-screen bg-light-gray">
+      <mat-spinner diameter="50"></mat-spinner>
+    </div>
+  </ng-template>
+  
+  <div *ngIf="hero; else divLoading" class="flex flex-row gap-4 align-items-stretch mt-3">
+    <!-- Tarjeta del héroe (imagen) -->
+    <mat-card class="flex-1 shadow-3 border-round surface-card p-3 flex flex-column align-items-center">
+      <mat-card-title class="text-3xl font-bold text-primary">{{ hero.alter_ego }}</mat-card-title>
+      <mat-card-subtitle class="text-md text-secondary">{{ hero.superhero }}</mat-card-subtitle>
+  
+      <img
+        [src]="hero | heroImage"
+        [alt]="hero.superhero"
+        mat-card-image
+        class="border-round-xl hero-image mt-3"
+      />
+    </mat-card>
+  
+    <!-- Tarjeta de información -->
+    <mat-card class="flex-1 shadow-3 border-round surface-card p-3 flex flex-column justify-content-between">
+      <div>
+        <mat-card-header>
+          <mat-card-title class="text-2xl font-bold text-primary">Información</mat-card-title>
+        </mat-card-header>
+  
+        <mat-card-content>
+          <mat-list dense>
+            <mat-list-item>
+              <span class="font-medium">Primera Aparición:</span>
+              <span class="ml-2">{{ hero.first_appearance }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span class="font-medium">Personajes:</span>
+              <span class="ml-2">{{ hero.characters }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span class="font-medium">Editorial:</span>
+              <span class="ml-2">{{ hero.publisher }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span class="font-medium">Alter Ego:</span>
+              <span class="ml-2">{{ hero.alter_ego }}</span>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </div>
+  
+      <div class="flex justify-content-start mt-4">
+        <button
+          mat-flat-button
+          color="primary"
+          class="p-button-rounded px-4 py-2 font-bold"
+          (click)="goBack()"
+        >
+          Volver
+        </button>
+      </div>
+    </mat-card>
+  </div>
+  
